@@ -1,5 +1,3 @@
-/* PARAMÈTRES GÉNÉRAUX */
-
 html {
     scroll-behavior: smooth;
 }
@@ -11,7 +9,6 @@ body {
     color: #111;
 }
 
-
 /* HEADER */
 
 header {
@@ -21,7 +18,6 @@ header {
     padding: 30px 20px;
     font-size: 40px;
 }
-
 
 /* SECTIONS */
 
@@ -36,6 +32,23 @@ header {
     background-color: #ffffff;
 }
 
+/* PREMIÈRE SECTION PLUS COMPACTE */
+
+.etape-accueil {
+    min-height: 85vh;
+}
+
+.etape-accueil .texte {
+    font-size: 24px;
+}
+
+.etape-accueil h2 {
+    font-size: 32px;
+}
+
+.etape-accueil .image img {
+    max-height: 55vh;
+}
 
 /* TEXTE */
 
@@ -48,7 +61,6 @@ header {
 .texte h2 {
     font-size: 36px;
 }
-
 
 /* IMAGE */
 
@@ -63,7 +75,6 @@ header {
     width: auto;
     border-radius: 15px;
 }
-
 
 /* BOUTONS */
 
@@ -90,8 +101,7 @@ header {
     outline: 4px solid #ffcc00;
 }
 
-
-/* BOUTON SCROLL */
+/* BOUTON CONTINUER */
 
 .bouton-scroll {
     position: absolute;
@@ -99,7 +109,6 @@ header {
     left: 50%;
     transform: translateX(-50%);
 }
-
 
 /* FOOTER */
 
