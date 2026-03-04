@@ -3,91 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jardinage étape par étape pour Wilfried</title>
+  <title>Jardinage étape par étape</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Jardinage Facile - Étapes</h1>
-    <nav role="navigation" aria-label="Menu principal">
-      <a href="#etape1" class="btn" role="button">Étape 1</a>
-      <a href="#etape2" class="btn" role="button">Étape 2</a>
-      <a href="#etape3" class="btn" role="button">Étape 3</a>
-      <a href="#etape4" class="btn" role="button">Étape 4</a>
-    </nav>
-  </header>
 
-  <main>
-    <!-- Étape 1 -->
-    <section id="etape1" class="full-page" aria-labelledby="titre-etape1">
-      <h2 id="titre-etape1">Étape 1 : Préparer le sol</h2>
-      <p>Choisissez un endroit ensoleillé. Nettoyez-le des mauvaises herbes.</p>
+<header>
+  <h1>Jardinage facile pour Wilfried</h1>
+</header>
+
+<main>
+
+  <!-- ÉTAPE 1 -->
+  <section id="etape1" class="etape" aria-labelledby="titre1">
+    <div class="texte">
+      <h2 id="titre1">Étape 1 : Préparer le sol</h2>
+      <p>Choisissez un endroit ensoleillé.</p>
+      <p>Nettoyez les mauvaises herbes.</p>
+
       <ul>
-        <li>Retirez les pierres et les racines.</li>
-        <li>Aérez la terre avec une fourche.</li>
+        <li>Retirez les pierres.</li>
+        <li>Aérez la terre.</li>
       </ul>
-      <button class="btn-audio" aria-label="Écouter l'article sur la préparation du sol">
+
+      <button class="btn-audio" aria-label="Écouter l'étape 1">
         Écouter le texte
       </button>
-      <img src="sol.jpg" alt="Préparer le sol avec une fourche" width="600" height="400">
-    </section>
+    </div>
 
-    <!-- Étape 2 -->
-    <section id="etape2" class="full-page" aria-labelledby="titre-etape2">
-      <h2 id="titre-etape2">Étape 2 : Planter les graines</h2>
-      <p>Plantez vos graines selon les instructions du paquet.</p>
+    <div class="image">
+      <img src="jardi1.jpg" alt="Préparation du sol avec une fourche">
+    </div>
+
+    <a href="#etape2" class="btn-next" role="button">
+      Continuer ↓
+    </a>
+  </section>
+
+
+  <!-- ÉTAPE 2 -->
+  <section id="etape2" class="etape" aria-labelledby="titre2">
+    <div class="texte">
+      <h2 id="titre2">Étape 2 : Planter les graines</h2>
+      <p>Faites des petits trous.</p>
+      <p>Placez les graines dedans.</p>
+
       <ul>
-        <li>Faites des petits trous réguliers.</li>
         <li>Recouvrez légèrement de terre.</li>
+        <li>Tassez doucement.</li>
       </ul>
-      <button class="btn-audio" aria-label="Écouter l'article sur la plantation des graines">
+
+      <button class="btn-audio" aria-label="Écouter l'étape 2">
         Écouter le texte
       </button>
-      <img src="graines.jpg" alt="Planter des graines dans des rangées" width="600" height="400">
-    </section>
+    </div>
 
-    <!-- Étape 3 -->
-    <section id="etape3" class="full-page" aria-labelledby="titre-etape3">
-      <h2 id="titre-etape3">Étape 3 : Arroser et entretenir</h2>
-      <p>Arrosez régulièrement et surveillez la croissance.</p>
+    <div class="image">
+      <img src="jardi2.jpg" alt="Plantation des graines en rangée">
+    </div>
+
+    <a href="#etape3" class="btn-next" role="button">
+      Continuer ↓
+    </a>
+  </section>
+
+
+  <!-- ÉTAPE 3 -->
+  <section id="etape3" class="etape" aria-labelledby="titre3">
+    <div class="texte">
+      <h2 id="titre3">Étape 3 : Arroser</h2>
+      <p>Arrosez doucement.</p>
+      <p>Ne mettez pas trop d’eau.</p>
+
       <ul>
-        <li>Évitez l’excès d’eau.</li>
-        <li>Enlevez les mauvaises herbes.</li>
+        <li>Arrosez le matin.</li>
+        <li>Surveillez la terre.</li>
       </ul>
-      <button class="btn-audio" aria-label="Écouter l'article sur l'arrosage et l'entretien">
+
+      <button class="btn-audio" aria-label="Écouter l'étape 3">
         Écouter le texte
       </button>
-      <img src="arrosage.jpg" alt="Arroser les plantes avec un arrosoir" width="600" height="400">
-    </section>
+    </div>
 
-    <!-- Étape 4 -->
-    <section id="etape4" class="full-page" aria-labelledby="titre-etape4">
-      <h2 id="titre-etape4">Étape 4 : Récolter</h2>
-      <p>Quand les plantes sont matures, récoltez vos fruits et légumes.</p>
+    <div class="image">
+      <img src="jardi3.jpg" alt="Arrosage des plantes avec un arrosoir">
+    </div>
+
+    <a href="#etape4" class="btn-next" role="button">
+      Continuer ↓
+    </a>
+  </section>
+
+
+  <!-- ÉTAPE 4 -->
+  <section id="etape4" class="etape" aria-labelledby="titre4">
+    <div class="texte">
+      <h2 id="titre4">Étape 4 : Récolter</h2>
+      <p>Attendez que les légumes soient mûrs.</p>
+      <p>Coupez proprement.</p>
+
       <ul>
-        <li>Utilisez des outils adaptés.</li>
-        <li>Ne cueillez pas trop tôt.</li>
+        <li>Ne tirez pas trop fort.</li>
+        <li>Rangez les outils.</li>
       </ul>
-      <button class="btn-audio" aria-label="Écouter l'article sur la récolte">
+
+      <button class="btn-audio" aria-label="Écouter l'étape 4">
         Écouter le texte
       </button>
-      <img src="recolte.jpg" alt="Récolte de légumes dans le jardin" width="600" height="400">
-    </section>
-  </main>
+    </div>
 
-  <footer>
-    <p>&copy; 2026 Jardinage Facile - Tous droits réservés</p>
-  </footer>
+    <div class="image">
+      <img src="jardi4.jpg" alt="Récolte de légumes dans un potager">
+    </div>
+  </section>
 
-  <script>
-    // Lecture audio pour chaque section
-    document.querySelectorAll('.btn-audio').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const text = btn.previousElementSibling.innerText;
-        const utterance = new SpeechSynthesisUtterance(text);
-        speechSynthesis.speak(utterance);
-      });
-    });
-  </script>
+</main>
+
+<script>
+document.querySelectorAll('.btn-audio').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const texte = btn.parentElement.innerText;
+    const lecture = new SpeechSynthesisUtterance(texte);
+    speechSynthesis.speak(lecture);
+  });
+});
+</script>
+
 </body>
 </html>

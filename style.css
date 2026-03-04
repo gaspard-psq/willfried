@@ -1,80 +1,90 @@
-/* style.css */
-
 :root {
-  --bg-color: #f5f5f5;
-  --text-color: #222222;
-  --btn-color: #005a00;
-  --btn-text: #ffffff;
-  --focus-color: #ffcc00;
+  --vert: #005a00;
+  --blanc: #ffffff;
+  --focus: #ffcc00;
 }
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  scroll-behavior: smooth; /* descente fluide */
 }
 
-header, footer {
+header {
   text-align: center;
   padding: 20px;
-  background-color: var(--btn-color);
-  color: var(--btn-text);
-}
-
-h1 {
-  font-size: 36px;
-  margin: 0 0 10px 0;
-}
-
-h2 {
+  background-color: var(--vert);
+  color: var(--blanc);
   font-size: 32px;
-  margin: 20px 0;
 }
 
-.full-page {
+.etape {
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* centre verticalement */
-  align-items: center;    /* centre horizontalement */
-  min-height: 100vh;      /* prend toute la hauteur de la page */
-  text-align: center;
-  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 60px;
+  position: relative;
 }
 
-.full-page p {
-  font-size: 28px;
+.texte {
+  width: 50%;
+  font-size: 26px;
   line-height: 1.8;
-  max-width: 800px;
 }
 
-.full-page ul {
-  font-size: 24px;
-  text-align: left;
-  margin: 20px 0;
+.texte h2 {
+  font-size: 34px;
 }
 
-img {
-  max-width: 80%;
-  height: auto;
-  border-radius: 8px;
+.image {
+  width: 45%;
+  text-align: center;
+}
+
+.image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Bouton audio */
+.btn-audio {
   margin-top: 20px;
-}
-
-.btn, .btn-audio {
-  display: inline-block;
-  padding: 20px 30px;
+  padding: 20px;
   font-size: 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  background-color: var(--btn-color);
-  color: var(--btn-text);
+  background-color: var(--vert);
+  color: white;
   border: none;
-  margin: 10px 0;
+  border-radius: 10px;
   cursor: pointer;
 }
 
-.btn:focus, .btn-audio:focus {
-  outline: 4px solid var(--focus-color);
+.btn-audio:focus {
+  outline: 4px solid var(--focus);
+}
+
+/* Gros bouton Continuer */
+.btn-next {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 25px 50px;
+  font-size: 32px;
+  background-color: var(--vert);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Animation au survol */
+.btn-next:hover {
+  transform: translateX(-50%) scale(1.1);
+  background-color: #008000;
+}
+
+/* Focus clavier */
+.btn-next:focus {
+  outline: 4px solid var(--focus);
 }
