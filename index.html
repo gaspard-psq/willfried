@@ -21,7 +21,7 @@
 
         <!-- Bouton écouter séparé -->
         <div class="bouton-audio-container">
-            <button class="bouton audio" onclick="document.getElementById('audio0').play()">
+            <button class="bouton audio" id="btnAudio0">
                 🔊 Écouter le texte
             </button>
         </div>
@@ -39,19 +39,22 @@
             </button>
         </div>
     </div>
+
+    <!-- L'audio placé à l'intérieur de la section pour éviter les problèmes -->
+    <audio id="audio0">
+        <source src="audio0.mp3" type="audio/mpeg">
+    </audio>
 </section>
 
-<audio id="audio0">
-    <source src="audio0.mp3" type="audio/mpeg">
-</audio>
-
 <script>
-    const audioButtons = document.querySelectorAll('button.bouton');
-    audioButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            btn.classList.add('active-audio');
-            setTimeout(() => btn.classList.remove('active-audio'), 500);
-        });
+    // Bouton audio spécifique
+    const btnAudio0 = document.getElementById('btnAudio0');
+    const audio0 = document.getElementById('audio0');
+
+    btnAudio0.addEventListener('click', () => {
+        audio0.play(); // Lecture audio
+        btnAudio0.classList.add('active-audio');
+        setTimeout(() => btnAudio0.classList.remove('active-audio'), 500);
     });
 </script>
 
