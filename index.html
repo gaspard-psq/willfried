@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
@@ -15,136 +14,42 @@
 
 <main>
 
-<!-- ========================= -->
-<!-- ÉTAPE 1 (ACCUEIL) -->
-<!-- ========================= -->
-
-<section class="etape etape-accueil" id="etape1">
-
+<section class="etape etape-choix" id="etape0">
     <div class="texte">
-        <h2>Voici les meilleurs conseils de jardinage</h2>
-        <p>Ce site vous guide étape par étape pour apprendre à jardiner facilement.</p>
-        <p>Les boutons sont gros et simples pour faciliter la navigation.</p>
+        <h2>Qu'aimeriez-vous jardiner ?</h2>
+        <p>Choisissez une catégorie pour commencer.</p>
 
         <div class="boutons-container">
-            <button class="bouton" onclick="document.getElementById('audio1').play()">
+            <button class="bouton" onclick="document.getElementById('audio0').play()">
                 🔊 Écouter le texte
+            </button>
+
+            <button class="bouton choix" onclick="window.location.href='fleurs.html'">
+                🌸 Fleurs
+            </button>
+            <button class="bouton choix" onclick="window.location.href='legumes.html'">
+                🥕 Légumes
+            </button>
+            <button class="bouton choix" onclick="window.location.href='fruits.html'">
+                🍎 Fruits
             </button>
         </div>
     </div>
-
-    <div class="image">
-        <img src="jardi1.jpg" alt="Outils de jardinage posés sur une table">
-    </div>
-
-    <a href="#etape2" class="bouton bouton-scroll">
-        Continuer ↓
-    </a>
-
-    <audio id="audio1">
-        <source src="audio1.mp3" type="audio/mpeg">
-    </audio>
-
 </section>
 
-<!-- ========================= -->
-<!-- ÉTAPE 2 -->
-<!-- ========================= -->
+<audio id="audio0">
+    <source src="audio0.mp3" type="audio/mpeg">
+</audio>
 
-<section class="etape" id="etape2">
-
-    <div class="texte">
-        <h2>Préparer la terre</h2>
-        <p>Bêchez la terre pour l’aérer et enlever les mauvaises herbes.</p>
-
-        <div class="boutons-container">
-            <button class="bouton" onclick="document.getElementById('audio2').play()">
-                🔊 Écouter le texte
-            </button>
-        </div>
-    </div>
-
-    <div class="image">
-        <img src="jardi2.jpg" alt="Préparation de la terre avec une bêche">
-    </div>
-
-    <a href="#etape3" class="bouton bouton-scroll">
-        Continuer ↓
-    </a>
-
-    <audio id="audio2">
-        <source src="audio2.mp3" type="audio/mpeg">
-    </audio>
-
-</section>
-
-<!-- ========================= -->
-<!-- ÉTAPE 3 -->
-<!-- ========================= -->
-
-<section class="etape" id="etape3">
-
-    <div class="texte">
-        <h2>Planter les graines</h2>
-        <p>Faites un petit trou, déposez la graine puis recouvrez légèrement.</p>
-
-        <div class="boutons-container">
-            <button class="bouton" onclick="document.getElementById('audio3').play()">
-                🔊 Écouter le texte
-            </button>
-        </div>
-    </div>
-
-    <div class="image">
-        <img src="jardi3.jpg" alt="Plantation de graines dans la terre">
-    </div>
-
-    <a href="#etape4" class="bouton bouton-scroll">
-        Continuer ↓
-    </a>
-
-    <audio id="audio3">
-        <source src="audio3.mp3" type="audio/mpeg">
-    </audio>
-
-</section>
-
-<!-- ========================= -->
-<!-- ÉTAPE 4 -->
-<!-- ========================= -->
-
-<section class="etape" id="etape4">
-
-    <div class="texte">
-        <h2>Arroser régulièrement</h2>
-        <p>Arrosez doucement le matin ou le soir pour garder la terre humide.</p>
-
-        <div class="boutons-container">
-            <button class="bouton" onclick="document.getElementById('audio4').play()">
-                🔊 Écouter le texte
-            </button>
-        </div>
-    </div>
-
-    <div class="image">
-        <img src="jardi4.jpg" alt="Arrosage des plantes avec un arrosoir">
-    </div>
-
-    <a href="#etape1" class="bouton bouton-scroll">
-        Revenir au début ↑
-    </a>
-
-    <audio id="audio4">
-        <source src="audio4.mp3" type="audio/mpeg">
-    </audio>
-
-</section>
-
-</main>
-
-<footer>
-    <p>Site simplifié et accessible pour favoriser l'autonomie.</p>
-</footer>
+<script>
+    const audioButtons = document.querySelectorAll('button.bouton');
+    audioButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.classList.add('active-audio');
+            setTimeout(() => btn.classList.remove('active-audio'), 500);
+        });
+    });
+</script>
 
 </body>
 </html>
