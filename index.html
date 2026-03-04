@@ -10,16 +10,16 @@
   <header>
     <h1>Jardinage Facile - Étapes</h1>
     <nav role="navigation" aria-label="Menu principal">
-      <a href="#etape1" class="btn" role="button">Préparer le sol</a>
-      <a href="#etape2" class="btn" role="button">Planter les graines</a>
-      <a href="#etape3" class="btn" role="button">Arroser et entretenir</a>
-      <a href="#etape4" class="btn" role="button">Récolter</a>
+      <a href="#etape1" class="btn" role="button">Étape 1</a>
+      <a href="#etape2" class="btn" role="button">Étape 2</a>
+      <a href="#etape3" class="btn" role="button">Étape 3</a>
+      <a href="#etape4" class="btn" role="button">Étape 4</a>
     </nav>
   </header>
 
   <main>
     <!-- Étape 1 -->
-    <section id="etape1" aria-labelledby="titre-etape1">
+    <section id="etape1" class="full-page" aria-labelledby="titre-etape1">
       <h2 id="titre-etape1">Étape 1 : Préparer le sol</h2>
       <p>Choisissez un endroit ensoleillé. Nettoyez-le des mauvaises herbes.</p>
       <ul>
@@ -33,7 +33,7 @@
     </section>
 
     <!-- Étape 2 -->
-    <section id="etape2" aria-labelledby="titre-etape2">
+    <section id="etape2" class="full-page" aria-labelledby="titre-etape2">
       <h2 id="titre-etape2">Étape 2 : Planter les graines</h2>
       <p>Plantez vos graines selon les instructions du paquet.</p>
       <ul>
@@ -47,7 +47,7 @@
     </section>
 
     <!-- Étape 3 -->
-    <section id="etape3" aria-labelledby="titre-etape3">
+    <section id="etape3" class="full-page" aria-labelledby="titre-etape3">
       <h2 id="titre-etape3">Étape 3 : Arroser et entretenir</h2>
       <p>Arrosez régulièrement et surveillez la croissance.</p>
       <ul>
@@ -61,7 +61,7 @@
     </section>
 
     <!-- Étape 4 -->
-    <section id="etape4" aria-labelledby="titre-etape4">
+    <section id="etape4" class="full-page" aria-labelledby="titre-etape4">
       <h2 id="titre-etape4">Étape 4 : Récolter</h2>
       <p>Quand les plantes sont matures, récoltez vos fruits et légumes.</p>
       <ul>
@@ -80,7 +80,7 @@
   </footer>
 
   <script>
-    // Script simple pour lecture audio (synthèse vocale)
+    // Lecture audio pour chaque section
     document.querySelectorAll('.btn-audio').forEach(btn => {
       btn.addEventListener('click', () => {
         const text = btn.previousElementSibling.innerText;
