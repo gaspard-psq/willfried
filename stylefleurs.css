@@ -1,0 +1,116 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff0f5; /* page fleurs */
+    color: #111;
+}
+
+header {
+    background-color: #005a00;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.etape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 60px 80px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.texte {
+    width: 50%;
+    font-size: 26px;
+    line-height: 1.6;
+}
+
+.texte h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    max-height: 65vh;
+    width: auto;
+    border-radius: 15px;
+}
+
+.boutons-container {
+    margin-top: 40px;
+}
+
+.bouton {
+    background-color: #007a00;
+    color: white;
+    padding: 20px 40px;
+    font-size: 28px;
+    border-radius: 15px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bouton:hover,
+.bouton:focus {
+    background-color: #004d00;
+}
+
+.bouton-scroll,
+.bouton-retour,
+.bouton.audio {
+    transition: all 0.3s ease;
+}
+
+.bouton-scroll.active,
+.bouton-retour.active,
+.bouton.audio.active {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffcc00;
+}
+
+.bouton-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bouton-retour {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer {
+    background-color: #003300;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
