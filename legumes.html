@@ -2,101 +2,111 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Jardinage Fleurs</title>
+    <title>Conseils de jardinage - Fleurs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylefleurs.css">
 </head>
 <body>
 
 <header>
-    <h1>Conseils pour les fleurs</h1>
+    <h1>Conseils de jardinage simples</h1>
 </header>
 
 <main>
 
-<!-- Étape 1 -->
-<section class="etape etape-accueil" id="etape1">
-    <div class="texte">
-        <h2>Voici les meilleurs conseils pour vos fleurs</h2>
-        <p>Ce site vous guide étape par étape pour jardiner facilement.</p>
-        <div class="boutons-container">
-            <button class="bouton" onclick="document.getElementById('audio1').play()">
+<!-- ========================= -->
+<!-- ÉTAPE 1 -->
+<!-- ========================= -->
+
+<section class="etape etape-fleurs" id="etape1">
+
+    <!-- BOUTON RETOUR AU CHOIX à gauche sous le header -->
+    <a href="index.html" class="bouton bouton-retour active">← Retour au choix</a>
+
+    <!-- TEXTE collé en haut à gauche -->
+    <div class="texte texte-haut-gauche">
+        <h2>Voici les meilleurs conseils de jardinage</h2>
+        <p>Ce site vous guide étape par étape pour apprendre à jardiner facilement.</p>
+
+        <!-- BOUTON ÉCOUTER LE TEXTE juste sous le texte -->
+        <div class="boutons-container bouton-audio-container">
+            <button class="bouton audio active" onclick="document.getElementById('audio1').play()">
                 🔊 Écouter le texte
             </button>
         </div>
     </div>
-    <div class="image">
-        <img src="fleurs1.jpg" alt="Outils de jardinage pour fleurs">
+
+    <!-- IMAGE à droite -->
+    <div class="image image-droite">
+        <img src="jardi1.jpg" alt="Outils de jardinage posés sur une table">
     </div>
-    <a href="#etape2" class="bouton bouton-scroll">Continuer ↓</a>
+
+    <!-- BOUTON CONTINUER ↓ remonté légèrement -->
+    <a href="#etape2" class="bouton bouton-scroll active" style="bottom: 120px;">Continuer ↓</a>
+
     <audio id="audio1">
-        <source src="fleurs1.mp3" type="audio/mpeg">
+        <source src="audio1.mp3" type="audio/mpeg">
     </audio>
+
 </section>
 
-<!-- Étape 2 -->
+<!-- Les étapes 2 à 4 restent inchangées -->
 <section class="etape" id="etape2">
     <div class="texte">
         <h2>Préparer la terre</h2>
         <p>Bêchez la terre pour l’aérer et enlever les mauvaises herbes.</p>
         <div class="boutons-container">
-            <button class="bouton" onclick="document.getElementById('audio2').play()">🔊 Écouter le texte</button>
+            <button class="bouton audio active" onclick="document.getElementById('audio2').play()">
+                🔊 Écouter le texte
+            </button>
         </div>
     </div>
     <div class="image">
-        <img src="fleurs2.jpg" alt="Préparation de la terre pour fleurs">
+        <img src="jardi2.jpg" alt="Préparation de la terre avec une bêche">
     </div>
-    <a href="#etape3" class="bouton bouton-scroll">Continuer ↓</a>
+    <a href="#etape3" class="bouton bouton-scroll active">Continuer ↓</a>
     <audio id="audio2">
-        <source src="fleurs2.mp3" type="audio/mpeg">
+        <source src="audio2.mp3" type="audio/mpeg">
     </audio>
 </section>
 
-<!-- Étape 3 -->
 <section class="etape" id="etape3">
     <div class="texte">
         <h2>Planter les graines</h2>
         <p>Faites un petit trou, déposez la graine puis recouvrez légèrement.</p>
         <div class="boutons-container">
-            <button class="bouton" onclick="document.getElementById('audio3').play()">🔊 Écouter le texte</button>
+            <button class="bouton audio active" onclick="document.getElementById('audio3').play()">
+                🔊 Écouter le texte
+            </button>
         </div>
     </div>
     <div class="image">
-        <img src="fleurs3.jpg" alt="Plantation de graines de fleurs">
+        <img src="jardi3.jpg" alt="Plantation de graines dans la terre">
     </div>
-    <a href="#etape4" class="bouton bouton-scroll">Continuer ↓</a>
+    <a href="#etape4" class="bouton bouton-scroll active">Continuer ↓</a>
     <audio id="audio3">
-        <source src="fleurs3.mp3" type="audio/mpeg">
+        <source src="audio3.mp3" type="audio/mpeg">
     </audio>
 </section>
 
-<!-- Étape 4 -->
 <section class="etape" id="etape4">
     <div class="texte">
         <h2>Arroser régulièrement</h2>
         <p>Arrosez doucement le matin ou le soir pour garder la terre humide.</p>
         <div class="boutons-container">
-            <button class="bouton" onclick="document.getElementById('audio4').play()">🔊 Écouter le texte</button>
+            <button class="bouton audio active" onclick="document.getElementById('audio4').play()">
+                🔊 Écouter le texte
+            </button>
         </div>
     </div>
     <div class="image">
-        <img src="fleurs4.jpg" alt="Arrosage des fleurs">
+        <img src="jardi4.jpg" alt="Arrosage des plantes avec un arrosoir">
     </div>
-    <a href="index.html" class="bouton bouton-scroll">Revenir au début ↑</a>
+    <a href="#etape1" class="bouton bouton-scroll active">Revenir au début ↑</a>
     <audio id="audio4">
-        <source src="fleurs4.mp3" type="audio/mpeg">
+        <source src="audio4.mp3" type="audio/mpeg">
     </audio>
 </section>
-
-<script>
-    const audioButtons = document.querySelectorAll('button.bouton');
-    audioButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            btn.classList.add('active-audio');
-            setTimeout(() => btn.classList.remove('active-audio'), 500);
-        });
-    });
-</script>
 
 </main>
 
