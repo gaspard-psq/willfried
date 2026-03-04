@@ -19,11 +19,15 @@
         <h2>Qu'aimeriez-vous jardiner ?</h2>
         <p>Choisissez une catégorie pour commencer.</p>
 
-        <div class="boutons-container">
-            <button class="bouton" onclick="document.getElementById('audio0').play()">
+        <!-- Bouton écouter séparé -->
+        <div class="bouton-audio-container">
+            <button class="bouton audio" onclick="document.getElementById('audio0').play()">
                 🔊 Écouter le texte
             </button>
+        </div>
 
+        <!-- Boutons choix sur la même ligne -->
+        <div class="boutons-choix-container">
             <button class="bouton choix" onclick="window.location.href='fleurs.html'">
                 🌸 Fleurs
             </button>

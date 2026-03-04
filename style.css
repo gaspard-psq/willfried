@@ -1,125 +1,80 @@
-html {
-    scroll-behavior: smooth;
-}
+/* ========================= */
+/* ÉTAPE CHOIX DE PLANTATION CENTRÉE */
+/* ========================= */
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    color: #111;
-}
-
-/* HEADER RÉDUIT */
-
-header {
-    background-color: #005a00;
-    color: white;
-    text-align: center;
-    padding: 15px 20px;      /* moins haut */
-}
-
-header h1 {
-    font-size: 28px;         /* texte réduit */
-    margin: 0;
-}
-
-/* SECTIONS */
-
-.etape {
+.etape-choix {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center; /* centre verticalement */
+    align-items: center;     /* centre horizontalement */
     min-height: 100vh;
-    padding: 60px 80px;
-    box-sizing: border-box;
-    position: relative;
+    text-align: center;
+    padding: 20px;
     background-color: #ffffff;
 }
 
-/* PREMIÈRE SECTION PLUS COMPACTE */
-
-.etape-accueil {
-    min-height: 85vh;
-}
-
-.etape-accueil .texte {
-    font-size: 24px;
-}
-
-.etape-accueil h2 {
-    font-size: 32px;
-}
-
-.etape-accueil .image img {
-    max-height: 55vh;
-}
-
-/* TEXTE */
-
-.texte {
-    width: 50%;
-    font-size: 26px;
-    line-height: 1.6;
-}
-
-.texte h2 {
+.etape-choix .texte h2 {
     font-size: 36px;
+    margin-bottom: 15px;
 }
 
-/* IMAGE */
-
-.image {
-    width: 45%;
-    display: flex;
-    justify-content: center;
+.etape-choix .texte p {
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 
-.image img {
-    max-height: 65vh;
-    width: auto;
+/* Bouton écouter le texte séparé */
+.bouton-audio-container {
+    margin-bottom: 50px;
+}
+
+.bouton.audio {
+    font-size: 28px;
+    padding: 20px 40px;
     border-radius: 15px;
-}
-
-/* BOUTONS */
-
-.boutons-container {
-    margin-top: 40px;
-}
-
-.bouton {
     background-color: #007a00;
     color: white;
-    padding: 20px 40px;
-    font-size: 28px;
-    border-radius: 15px;
-    text-decoration: none;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.bouton:hover,
-.bouton:focus {
+.bouton.audio:hover,
+.bouton.audio:focus {
     background-color: #004d00;
     transform: scale(1.08);
     outline: 4px solid #ffcc00;
 }
 
-/* BOUTON CONTINUER */
-
-.bouton-scroll {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+/* Boutons choix sur la même ligne et même taille */
+.boutons-choix-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* FOOTER */
-
-footer {
-    background-color: #003300;
+.boutons-choix-container .bouton.choix {
+    font-size: 28px;
+    padding: 20px 40px;
+    border-radius: 15px;
+    background-color: #007a00;
     color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    min-width: 150px; /* même largeur minimale */
+    transition: all 0.3s ease;
+}
+
+.boutons-choix-container .bouton.choix:hover,
+.boutons-choix-container .bouton.choix:focus {
+    background-color: #004d00;
+    transform: scale(1.08);
+    outline: 4px solid #ffcc00;
+}
+
+/* Animation boutons audio et continuer */
+.active-audio {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffcc00;
 }
