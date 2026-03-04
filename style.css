@@ -10,13 +10,30 @@ body {
   scroll-behavior: smooth;
 }
 
-/* STRUCTURE GENERALE */
+/* HEADER */
+header {
+  background-color: var(--vert);
+  color: var(--blanc);
+  text-align: center;
+  padding: 25px;
+  font-size: 32px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+/* STRUCTURE ETAPES */
 .etape {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  padding: 60px;
+  padding: 80px;
   position: relative;
 }
 
@@ -24,10 +41,6 @@ body {
   width: 50%;
   font-size: 28px;
   line-height: 1.8;
-}
-
-.texte h1 {
-  font-size: 42px;
 }
 
 .texte h2 {
@@ -47,7 +60,7 @@ body {
   border-radius: 12px;
 }
 
-/* BOUTONS ALIGNÉS */
+/* BOUTONS ALIGNES */
 .boutons {
   display: flex;
   gap: 20px;
@@ -64,13 +77,13 @@ body {
   border-radius: 10px;
   cursor: pointer;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .btn-principal:hover,
 .btn-audio:hover {
   background-color: #008000;
   transform: scale(1.05);
-  transition: 0.3s;
 }
 
 .btn-principal:focus,
