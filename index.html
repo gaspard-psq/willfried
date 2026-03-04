@@ -1,124 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conseils de jardinage accessibles</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Conseils de jardinage accessibles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-  <h1>Conseils de jardinage simples</h1>
+    <h1>Conseils de jardinage simples</h1>
 </header>
 
 <main>
 
-<!-- ACCUEIL -->
-<section id="accueil" class="etape">
-  <div class="texte">
-    <h2>Voici les meilleurs conseils de jardinage</h2>
+<!-- ÉTAPE 1 -->
 
-    <p>Ce site vous guide étape par étape.</p>
-    <p>Les explications sont simples.</p>
-    <p>Vous pouvez lire ou écouter le texte.</p>
+<section class="etape" id="etape1">
 
-    <div class="boutons">
-      <a href="#etape1" class="btn-principal">Lire l’article ↓</a>
-      <button class="btn-audio">Écouter le texte</button>
+    <div class="texte">
+        <h2>Voici les meilleurs conseils de jardinage</h2>
+        <p>Ce site vous guide étape par étape pour apprendre à jardiner facilement.</p>
+        <p>Les boutons sont gros et simples pour faciliter la navigation.</p>
+
+        <div class="boutons-container">
+            <button class="bouton" onclick="document.getElementById('audio1').play()">
+                🔊 Écouter le texte
+            </button>
+        </div>
     </div>
-  </div>
 
-  <div class="image">
-    <img src="jardi1.jpg" alt="Jardin simple avec légumes">
-  </div>
+    <div class="image">
+        <img src="jardi1.jpg" alt="Outils de jardinage posés sur une table">
+    </div>
+
+    <a href="#etape2" class="bouton bouton-scroll">
+        Continuer ↓
+    </a>
+
+    <audio id="audio1">
+        <source src="audio1.mp3" type="audio/mpeg">
+    </audio>
+
 </section>
 
-<!-- ETAPE 1 -->
-<section id="etape1" class="etape">
-  <div class="texte">
-    <h2>Étape 1 : Préparer le sol</h2>
-    <p>Choisissez un endroit ensoleillé.</p>
-    <p>Nettoyez la terre.</p>
 
-    <ul>
-      <li>Retirez les pierres.</li>
-      <li>Aérez la terre.</li>
-    </ul>
+<!-- ÉTAPE 2 -->
 
-    <div class="boutons">
-      <button class="btn-audio">Écouter le texte</button>
+<section class="etape" id="etape2">
+
+    <div class="texte">
+        <h2>Préparer la terre</h2>
+        <p>Bêchez la terre pour l’aérer et enlever les mauvaises herbes.</p>
+
+        <div class="boutons-container">
+            <button class="bouton" onclick="document.getElementById('audio2').play()">
+                🔊 Écouter le texte
+            </button>
+        </div>
     </div>
-  </div>
 
-  <div class="image">
-    <img src="jardi2.jpg" alt="Préparation du sol">
-  </div>
+    <div class="image">
+        <img src="jardi2.jpg" alt="Préparation de la terre avec une bêche">
+    </div>
 
-  <a href="#etape2" class="btn-next">Continuer ↓</a>
+    <a href="#etape3" class="bouton bouton-scroll">
+        Continuer ↓
+    </a>
+
+    <audio id="audio2">
+        <source src="audio2.mp3" type="audio/mpeg">
+    </audio>
+
 </section>
 
-<!-- ETAPE 2 -->
-<section id="etape2" class="etape">
-  <div class="texte">
-    <h2>Étape 2 : Planter</h2>
-    <p>Faites un petit trou.</p>
-    <p>Mettez la graine dedans.</p>
 
-    <ul>
-      <li>Recouvrez doucement.</li>
-      <li>Tassez légèrement.</li>
-    </ul>
+<!-- ÉTAPE 3 -->
 
-    <div class="boutons">
-      <button class="btn-audio">Écouter le texte</button>
+<section class="etape" id="etape3">
+
+    <div class="texte">
+        <h2>Planter les graines</h2>
+        <p>Faites un petit trou, déposez la graine puis recouvrez légèrement.</p>
+
+        <div class="boutons-container">
+            <button class="bouton" onclick="document.getElementById('audio3').play()">
+                🔊 Écouter le texte
+            </button>
+        </div>
     </div>
-  </div>
 
-  <div class="image">
-    <img src="jardi3.jpg" alt="Plantation des graines">
-  </div>
+    <div class="image">
+        <img src="jardi3.jpg" alt="Plantation de graines dans la terre">
+    </div>
 
-  <a href="#etape3" class="btn-next">Continuer ↓</a>
+    <a href="#etape4" class="bouton bouton-scroll">
+        Continuer ↓
+    </a>
+
+    <audio id="audio3">
+        <source src="audio3.mp3" type="audio/mpeg">
+    </audio>
+
 </section>
 
-<!-- ETAPE 3 -->
-<section id="etape3" class="etape">
-  <div class="texte">
-    <h2>Étape 3 : Arroser</h2>
-    <p>Arrosez doucement.</p>
-    <p>Ne mettez pas trop d’eau.</p>
 
-    <ul>
-      <li>Arrosez le matin.</li>
-      <li>Vérifiez la terre.</li>
-    </ul>
+<!-- ÉTAPE 4 -->
 
-    <div class="boutons">
-      <button class="btn-audio">Écouter le texte</button>
+<section class="etape" id="etape4">
+
+    <div class="texte">
+        <h2>Arroser régulièrement</h2>
+        <p>Arrosez doucement le matin ou le soir pour garder la terre humide.</p>
+
+        <div class="boutons-container">
+            <button class="bouton" onclick="document.getElementById('audio4').play()">
+                🔊 Écouter le texte
+            </button>
+        </div>
     </div>
-  </div>
 
-  <div class="image">
-    <img src="jardi4.jpg" alt="Arrosage des plantes">
-  </div>
+    <div class="image">
+        <img src="jardi4.jpg" alt="Arrosage des plantes avec un arrosoir">
+    </div>
+
+    <a href="#etape1" class="bouton bouton-scroll">
+        Revenir au début ↑
+    </a>
+
+    <audio id="audio4">
+        <source src="audio4.mp3" type="audio/mpeg">
+    </audio>
+
 </section>
 
 </main>
 
 <footer>
-  <p>Site sans publicité. Aucun suivi de données. Respect de la vie privée.</p>
+    <p>Site simplifié et accessible pour favoriser l'autonomie.</p>
 </footer>
-
-<script>
-document.querySelectorAll('.btn-audio').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const texte = btn.closest('.texte').innerText;
-    const lecture = new SpeechSynthesisUtterance(texte);
-    speechSynthesis.speak(lecture);
-  });
-});
-</script>
 
 </body>
 </html>
