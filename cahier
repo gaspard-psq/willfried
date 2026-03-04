@@ -1,0 +1,214 @@
+Textes
+
+Langage simple, phrases courtes.
+
+Une seule idée par paragraphe.
+
+Vocabulaire concret, suppression du jargon technique.
+
+Utilisation de listes à puces pour structurer l’information.
+
+Présence d’un bouton « Écouter le texte » (synthèse vocale intégrée).
+Référence WCAG : 3.1.5 Reading Level.
+
+Polices de caractères
+
+Police sans empattement (ex. Arial, Verdana).
+
+Taille minimale : 18 px.
+
+Interligne : 1.5 minimum.
+
+Possibilité d’agrandir le texte sans perte de contenu (zoom 200 %).
+Référence WCAG : 1.4.4 Resize text.
+
+Mise en page
+
+Structure simple, en colonne unique.
+
+Large espacement entre les éléments cliquables.
+
+Aucun contenu essentiel uniquement transmis par la couleur.
+
+Hiérarchie stricte H1 > H2 > H3.
+Référence WCAG : 1.3.1 Info and Relationships.
+
+Illustrations
+
+Images explicatives claires.
+
+Attribut alt descriptif obligatoire.
+
+Pas de texte intégré dans les images.
+Référence WCAG : 1.1.1 Non-text Content.
+
+Moyens de sélection des items
+
+Boutons larges (minimum 44x44 px).
+
+Navigation possible au clavier uniquement.
+
+Pas d’interaction dépendante du double-clic.
+Référence WCAG : 2.1.1 Keyboard.
+
+Modalités d’accès aux contenus
+
+Version audio des articles.
+
+Vidéos sous-titrées.
+
+Aucun contenu sonore déclenché automatiquement.
+Référence WCAG : 1.4.2 Audio Control.
+
+2.2 Navigation et accessibilité
+
+Interface graphique
+
+Écran épuré.
+
+Pas de surcharge visuelle.
+
+Indicateur clair de position dans le site (fil d’Ariane).
+
+Menus
+
+Menu principal fixe en haut.
+
+Maximum 5 rubriques.
+
+Libellés explicites (ex. “Planter des tomates”).
+Référence WCAG : 2.4.6 Headings and Labels.
+
+Boutons
+
+Contraste minimum 4.5:1.
+
+Texte descriptif (éviter “cliquez ici”).
+
+Focus visible au clavier.
+Référence WCAG : 1.4.3 Contrast (Minimum), 2.4.7 Focus Visible.
+
+Couleurs
+
+Mode contraste élevé activable.
+
+Aucune information uniquement transmise par la couleur.
+Référence WCAG : 1.4.1 Use of Color.
+
+Animations
+
+Pas d’animations automatiques.
+
+Option pour désactiver les transitions.
+Référence WCAG : 2.3.3 Animation from Interactions.
+
+Interactions
+
+Confirmation visuelle après action.
+
+Pas de limite de temps.
+Référence WCAG : 2.2.1 Timing Adjustable.
+
+2.3 Sécurité et éthique
+
+Vie privée
+
+Aucun tracking non nécessaire.
+
+Pas de cookies publicitaires.
+
+Politique de confidentialité rédigée en langage simple.
+Référence RGPD : https://www.cnil.fr/
+
+Communication
+
+Aucun contenu sponsorisé ambigu.
+
+Pas de manipulation commerciale.
+
+Formulaire de contact simple, sans collecte excessive de données.
+
+SPÉCIFICATIONS TECHNIQUES
+
+3.1 Front-end
+
+Langages
+
+HTML5 sémantique
+
+CSS3
+
+JavaScript léger (vanilla JS)
+
+Accessibilité
+
+Utilisation des rôles ARIA lorsque nécessaire.
+
+Respect strict de la hiérarchie des titres.
+
+Tests via WAVE : https://wave.webaim.org/
+
+Gestion des couleurs
+
+Variables CSS personnalisées.
+
+Vérification contraste via : https://webaim.org/resources/contrastchecker/
+
+Frameworks
+
+Aucun framework lourd (éviter complexité inutile).
+
+Option possible : Bootstrap en version accessible.
+
+3.2 Back-end
+
+Langages
+
+PHP ou Node.js
+
+API REST simple
+
+Stockage
+
+Base de données MySQL ou PostgreSQL
+
+Stockage structuré des articles par catégories
+
+Accessibilité
+
+Pas de dépendance à des contenus dynamiques bloquant la navigation clavier
+
+Temps de réponse optimisé (chargement < 3 secondes)
+
+EXEMPLE DE SPÉCIFICATION IMPLÉMENTÉE (PoC WCAG)
+
+Problème identifié
+Wilfried a des difficultés à utiliser une souris et souffre de fatigue visuelle.
+
+Solution implémentée
+Bouton large, accessible clavier, avec contraste élevé et lecture audio.
+
+Exemple de code conforme WCAG :
+
+<button class="btn-jardin" aria-label="Écouter l'article sur la plantation des tomates">
+  Écouter l’article
+</button>
+.btn-jardin {
+  font-size: 20px;
+  padding: 15px;
+  background-color: #005a00;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-jardin:focus {
+  outline: 4px solid #ffcc00;
+}
+
+Conformité :
+
+Navigation clavier (WCAG 2.1.1)
+
+Focus visible (2.4.7)
+
+Contraste conforme (1.4.3)
