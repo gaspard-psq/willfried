@@ -3,40 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jardinage facile pour Wilfried</title>
+  <title>Jardinage étape par étape pour Wilfried</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Jardinage Facile</h1>
+    <h1>Jardinage Facile - Étapes</h1>
     <nav role="navigation" aria-label="Menu principal">
-      <a href="#fleurs" class="btn" role="button">Fleurs</a>
-      <a href="#legumes" class="btn" role="button">Légumes</a>
-      <a href="#conseils" class="btn" role="button">Conseils</a>
+      <a href="#etape1" class="btn" role="button">Préparer le sol</a>
+      <a href="#etape2" class="btn" role="button">Planter les graines</a>
+      <a href="#etape3" class="btn" role="button">Arroser et entretenir</a>
+      <a href="#etape4" class="btn" role="button">Récolter</a>
     </nav>
   </header>
 
   <main>
-    <section id="fleurs" aria-labelledby="fleurs-title">
-      <h2 id="fleurs-title">Les Fleurs</h2>
-      <p>Apprenez à planter et entretenir vos fleurs facilement.</p>
-      <img src="fleurs.jpg" alt="Un jardin coloré avec des fleurs" width="600" height="400">
+    <!-- Étape 1 -->
+    <section id="etape1" aria-labelledby="titre-etape1">
+      <h2 id="titre-etape1">Étape 1 : Préparer le sol</h2>
+      <p>Choisissez un endroit ensoleillé. Nettoyez-le des mauvaises herbes.</p>
+      <ul>
+        <li>Retirez les pierres et les racines.</li>
+        <li>Aérez la terre avec une fourche.</li>
+      </ul>
+      <button class="btn-audio" aria-label="Écouter l'article sur la préparation du sol">
+        Écouter le texte
+      </button>
+      <img src="sol.jpg" alt="Préparer le sol avec une fourche" width="600" height="400">
     </section>
 
-    <section id="legumes" aria-labelledby="legumes-title">
-      <h2 id="legumes-title">Les Légumes</h2>
-      <p>Découvrez comment cultiver vos légumes avec peu d’effort.</p>
-      <img src="legumes.jpg" alt="Potager avec légumes variés" width="600" height="400">
+    <!-- Étape 2 -->
+    <section id="etape2" aria-labelledby="titre-etape2">
+      <h2 id="titre-etape2">Étape 2 : Planter les graines</h2>
+      <p>Plantez vos graines selon les instructions du paquet.</p>
+      <ul>
+        <li>Faites des petits trous réguliers.</li>
+        <li>Recouvrez légèrement de terre.</li>
+      </ul>
+      <button class="btn-audio" aria-label="Écouter l'article sur la plantation des graines">
+        Écouter le texte
+      </button>
+      <img src="graines.jpg" alt="Planter des graines dans des rangées" width="600" height="400">
     </section>
 
-    <section id="conseils" aria-labelledby="conseils-title">
-      <h2 id="conseils-title">Conseils pratiques</h2>
-      <p>Conseils simples pour réussir votre jardinage.</p>
+    <!-- Étape 3 -->
+    <section id="etape3" aria-labelledby="titre-etape3">
+      <h2 id="titre-etape3">Étape 3 : Arroser et entretenir</h2>
+      <p>Arrosez régulièrement et surveillez la croissance.</p>
+      <ul>
+        <li>Évitez l’excès d’eau.</li>
+        <li>Enlevez les mauvaises herbes.</li>
+      </ul>
+      <button class="btn-audio" aria-label="Écouter l'article sur l'arrosage et l'entretien">
+        Écouter le texte
+      </button>
+      <img src="arrosage.jpg" alt="Arroser les plantes avec un arrosoir" width="600" height="400">
+    </section>
+
+    <!-- Étape 4 -->
+    <section id="etape4" aria-labelledby="titre-etape4">
+      <h2 id="titre-etape4">Étape 4 : Récolter</h2>
+      <p>Quand les plantes sont matures, récoltez vos fruits et légumes.</p>
+      <ul>
+        <li>Utilisez des outils adaptés.</li>
+        <li>Ne cueillez pas trop tôt.</li>
+      </ul>
+      <button class="btn-audio" aria-label="Écouter l'article sur la récolte">
+        Écouter le texte
+      </button>
+      <img src="recolte.jpg" alt="Récolte de légumes dans le jardin" width="600" height="400">
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Jardinage Facile</p>
+    <p>&copy; 2026 Jardinage Facile - Tous droits réservés</p>
   </footer>
+
+  <script>
+    // Script simple pour lecture audio (synthèse vocale)
+    document.querySelectorAll('.btn-audio').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const text = btn.previousElementSibling.innerText;
+        const utterance = new SpeechSynthesisUtterance(text);
+        speechSynthesis.speak(utterance);
+      });
+    });
+  </script>
 </body>
 </html>
